@@ -1,0 +1,29 @@
+n = int(input())
+
+helmet = float(input())
+sword = float(input())
+shield = float(input())
+armor = float(input())
+counter = 0
+value = 0
+
+
+for i in range(1, n+1):
+    
+  
+    sword1 = False
+    helmet1 = False
+    
+    if i % 2 == 0:
+        value += helmet
+        helmet1 = True
+        
+    if i % 3 == 0:
+        value += sword
+        sword1 = True
+    
+    if sword1 and helmet1:
+        value += shield
+        counter += 1
+        if counter % 2 == 0:
+            value += armor
